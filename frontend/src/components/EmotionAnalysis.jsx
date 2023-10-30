@@ -6,7 +6,6 @@ const EmotionRecognition = () => {
   const [emotionResult, setEmotionResult] = useState('');
 
   useEffect(() => {
-    // Make a POST request to your /api/v1/emotion route with inputText
     fetch('http://localhost:3005/api/v1/emotion', {
       method: 'POST',
       body: JSON.stringify({ text: inputText }),

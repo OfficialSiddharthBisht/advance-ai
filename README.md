@@ -1,4 +1,8 @@
-# advance-ai
+# ScreenShots
+![Dark Homepage](./screenshots/imageDark.png)
+![Alt text](./screenshots/image-1.png)
+![Alt text](./screenshots/image-2.png)
+![Alt text](./screenshots/image.png)
 # Advanced AI-Enhanced Content Generation Application
 
 
