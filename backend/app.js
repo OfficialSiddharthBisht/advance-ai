@@ -15,12 +15,12 @@ app.use(cookieParser());
 // routes imports
 const analyze = require("./routes/analyze.routes");
 const summarize = require("./routes/extractTextPdf.routes");
-
+const emotionRecognition = require("./routes/emotionRecognition.routes");
 
 // routes use
 app.use("/api/v1",analyze)
 app.use("/api/v1",summarize);
-
+app.use("/api/v1",emotionRecognition);
 // middleware for errors
 app.use(errorMiddleware)
 
