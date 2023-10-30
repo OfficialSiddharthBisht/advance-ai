@@ -14,10 +14,12 @@ app.use(cookieParser());
 
 // routes imports
 const analyze = require("./routes/analyze.routes");
+const summarize = require("./routes/extractTextPdf.routes");
 
 
 // routes use
 app.use("/api/v1",analyze)
+app.use("/api/v1",summarize);
 
 // middleware for errors
 app.use(errorMiddleware)

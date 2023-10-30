@@ -16,15 +16,13 @@ exports.analyzeController = catchAsyncErrors( async (req, res) => {
       { role: 'system', content: 'You are a helpful assistant.' },
       { role: 'user', content: keyword },
     ];
-
+    // console.log(process.env.OPEN_API_KEY);
     // Generate text with context
     const response = await axios.post('https://api.openai.com/v1/engines/davinci/completions', {
       prompt: messages.map((message) => message.role + ': ' + message.content).join('.\n'),
     }, {
       headers: {
-        // 'Authorization': process.env.OPEN_API_KEY, 
-        'Authorization': "Bearer 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", 
-
+        'Authorization':`Bearer ${process.env.OPEN_API_KEY}`, 
       },
     });
 
